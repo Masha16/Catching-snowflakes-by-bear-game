@@ -17,6 +17,7 @@ class Game {
   
     start() {
       this.drawBear();
+      
       setInterval(()=> {
           this.clear();
           this.drawBear();
@@ -34,6 +35,6 @@ class Game {
     }
 
     moveBear () {
-        this.bear.move()
+        this.bear.move();
     }
   }

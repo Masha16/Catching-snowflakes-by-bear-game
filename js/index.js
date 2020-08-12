@@ -7,5 +7,5 @@ window.onload = function(){
         firstGame.init();
     };
 
-
+  
 } 
