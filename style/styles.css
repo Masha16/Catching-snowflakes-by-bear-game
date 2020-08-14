@@ -7,7 +7,7 @@ body {
     position: absolute;
     align-items: center;
     margin-top: 150px;
-    margin-left: 250px;
+    margin-left: 100px;
     background-color: #15273b;
 }
 
@@ -32,4 +32,26 @@ body {
   }
   .snowflake:hover {
       cursor: default;
-  }*/
+  }
+
+#startButton {
+    top: 50%;
+    font-size: 20px;
+    font-family: "DIN Alternate Bold";
+    background-color: #15273b;
+    padding: 20px 40px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 300px;
+    margin-left: 20px; 
+}
+a {
+    color: white;
+}
+
+#timer {
+    margin-left: 90px;
+    weight: 1000;
+}

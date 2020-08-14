@@ -6,7 +6,7 @@ class Game {
     this.y = 0;
     this.width = 650;
     this.height = 450;
-    this.bear = new Bear(this, 200, 340, 80, 110);
+    // this.bear = new Bear(this, 200, 340, 80, 110);
     this.snow = new Snow(this, this.width, this.height);
   }
 
@@ -15,13 +15,14 @@ class Game {
   }
 
   start() {
-    this.drawBear();
+    // this.drawBear();
+    this.counter();
 
     setInterval(() => {
       this.clear();
-      this.generateSnow();
-      this.drawBear();
-      this.moveBear();
+      this.generateSnow();  
+      // this.drawBear();
+      // this.moveBear();
     }, 100);
   }
 
@@ -29,13 +30,13 @@ class Game {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
-  drawBear() {
-    this.bear.drawComponent("../img/bear.jpg");
-  }
+  // drawBear() {
+  //   this.bear.drawComponent("../img/bear.jpg");
+  // }
 
-  moveBear() {
-    this.bear.move();
-  }
+  // moveBear() {
+  //   this.bear.move();
+  // }
 
   generateSnow() {
     this.snow.addFlake();
@@ -54,6 +55,25 @@ class Game {
         false
       );
       gameContext.fill();
+    
+
     });
   }
+ counter () {
+  let timerElement = document.getElementById('timer');
+document.getElementById('timer').style.font = "20px DIN Alternate Bold";
+document.getElementById('timer').style.color = "#15273b";
+let seconds = 0; // counter starts from 0
+let counter =function(){
+  seconds=seconds+1; // adds 1 to seconds
+  timerElement.innerHTML = ("SCORE: "+seconds);
+}
+// timer interval is every second (1000ms)
+setInterval(counter, 1000);
+
+}
+
+
+
+
 }

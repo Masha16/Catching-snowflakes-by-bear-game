@@ -7,9 +7,9 @@ class Snow {
   }
 
   addFlake() {
-    let flakePositionX = Math.floor(Math.random() * this.canvasWidth) + 1;
+    let flakePositionX = Math.floor(Math.random() * this.canvasWidth) + 3;
     let flakePositionY = 0;
-    let flakeSpeed = Math.floor(Math.random() * 3) + 5;
+    let flakeSpeed = Math.floor(Math.random() * 1) + 20;
 
     this.flakes.push({
       x: flakePositionX,
@@ -17,4 +17,6 @@ class Snow {
       speed: flakeSpeed,
     });
   }
+  
+
 }
